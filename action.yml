@@ -1,0 +1,16 @@
+name: 'Pull Request Comment'
+description: 'Automatically comment on a pull request with the provided message'
+inputs:
+  message:
+    description: 'Message body that will be added to the pull request'
+    required: true
+    default: 'Hello, world!'
+  assignees:
+    description: 'Github usernames to assign the pull request to'
+    required: false  
+  GITHUB_TOKEN:
+    description: 'GitHub token of the repository'
+    required: true
+runs:
+  using: 'node12'
+  main: 'dist/index.js'
